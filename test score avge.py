@@ -16,5 +16,5 @@ def score_avg():
     avg = sum/10
     print(avg)
     
-score_avg()
-
+score_avg():
+    

@@ -2,6 +2,7 @@
 #Test score Average
 #9/17/18
 def score_avg():
+    global avg
     score1 = input("score:")
     score2 = input("score:")
     score3 = input("score:")
@@ -16,5 +17,22 @@ def score_avg():
     avg = sum/10
     print(avg)
     
-score_avg()
 
+def letter_grade():
+    if avg>=90:
+        print("A")
+    elif avg>=80:
+        print("B")
+    elif avg>=70:
+        print("C")
+    elif avg>=60:
+        print("D")
+    elif avg>=50:
+        print("F")
+    else:
+        print("You are very dumb!!! STUDY MORE")
+   
+    
+
+score_avg()
+letter_grade()
