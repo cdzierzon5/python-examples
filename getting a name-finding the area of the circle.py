@@ -5,11 +5,11 @@
 def get_name():
     
 #step 1 ask user for name
- name=input("what's your name?")
+ name=input("what's your name? ")
 #step 2 display name
- print("the name yo u entered was,",name)
+ print("the name you entered was,",name)
 #step 3 verify the name
- input("is this correct? yes or no")
+ input("is this correct? yes or no ")
 
 print("this is our function")
 get_name()
