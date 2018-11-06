@@ -2,7 +2,6 @@
 #cody and nick
 #11/2/2018
 
-
 import random
 global attempts
 global maxTries
@@ -13,7 +12,6 @@ maxTries = 5
 intRange = "1-100"
 gNumber = random.randrange(0, 100)
 
-
 def menu():
     while True:
         print("This is a guess my number game.")
@@ -22,7 +20,7 @@ def menu():
             custom = input("Do you want to create your own parameters for the game? y/n ")
             if custom.lower() == "y":
                 return options()
-            if custom.lower == "n":
+            if custom.lower() == "n":
                 return play()
         if start.lower() == "credits":
                 return credits()
@@ -31,9 +29,6 @@ def menu():
             exit()
         else:
             print("Invalid Option")
-
-    
-
 
 def play():
     guess_1 = input("What is your guess? ")
@@ -49,12 +44,10 @@ def play():
             print("incorrect")
             print("guess lower")
             attemts += 1
-    
     else:
         print("that is not a valid answer")
         return play()
     
-
 def options():
     print("Max Tries is",maxTries+".")
     print("Range is",intRange+".")
@@ -82,7 +75,6 @@ def options():
                 print("I don’t know what you mean")
         else:
             print("i dont know what that means")
-
 
 def credits():
     print("This game was created on 11/2/2018 by Nick and Cody")
