@@ -3,7 +3,14 @@
 #11/2/2018
 
 import random
+<<<<<<< HEAD
 
+=======
+global attempts
+global maxTries
+global intRange
+global gNumber
+>>>>>>> 94edbb3dea9dabffc84add99ae14c5baaf5dfa00
 attempts = 0
 maxTries = 5
 intRange = "1-100"
@@ -28,6 +35,7 @@ def menu():
         else:
             print("Invalid Option")
 
+<<<<<<< HEAD
 #play allows for the player to guess a number
 def play():
     global attempts
@@ -62,6 +70,26 @@ def play():
         return play()
 
 #options allows for changing in the attepts and range
+=======
+def play():
+    guess_1 = input("What is your guess? ")
+    if guess_1.digit():
+        if guess_1 == gNumber:
+            print("You WON!")
+            return menu()
+        if guess_1 <= gNumber:
+            print("incorrect")
+            print("guess higher")
+            attempts += 1
+        if guess_1 >= gNumber:
+            print("incorrect")
+            print("guess lower")
+            attemts += 1
+    else:
+        print("that is not a valid answer")
+        return play()
+    
+>>>>>>> 94edbb3dea9dabffc84add99ae14c5baaf5dfa00
 def options():
     global maxTries
     global intRange
@@ -76,6 +104,7 @@ def options():
         print("maxtries: ",maxTries)
         #attempts = newmaxTries
 
+<<<<<<< HEAD
         
     if yn.lower() == "n":
         print("you said no")
@@ -108,6 +137,28 @@ def options():
         print("i dont know what that means")
 
 #credits showing who made the game and when
+=======
+        yn = input("Do you want to change range? [y/n]: ")
+        if yn.lower() == "y":
+            tempRange = input("’1-100’ or ‘1-200’ or ‘1-300’")
+            if tempRange == "1-100":
+                intRange = "1-100"
+                print("range changed to 1-100")
+            
+            elif tempRange == "1-200":
+                intRange = "1-200"
+                print("range changed to 1-200")
+            
+            elif tempRange == "1-300":
+                intRange = "1-300"
+                print("range changed to 1-300")
+            
+            else:
+                print("I don’t know what you mean")
+        else:
+            print("i dont know what that means")
+
+>>>>>>> 94edbb3dea9dabffc84add99ae14c5baaf5dfa00
 def credits():
     print("This game was created on 11/2/2018 by Nick and Cody")
     cEnd = input("would you like to return to the menu?[y/n]")
