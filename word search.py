@@ -50,6 +50,7 @@ while x==0:
     foundword=""
     while i < word1_length:
         index=word1[i]
+        print(index)
         index=int(index)
         foundword = foundword+puzzle[index]
         i+=1
@@ -60,16 +61,17 @@ while x==0:
     else:
         print("that's not right try again")
 
+display_puzzle
 x=0
 while x==0:
-    word1=input("Enter the index positions of while: ")
+    word2=input("Enter the index positions of while: ")
     attempts+=1
     i=0
     foundword=""
     while i < word2_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
+        index1=word2[i]
+        index2=word2[i+1]
+        index=index1+index2
         index=int(index)
         foundword = foundword+puzzle[index]
         i+=2
@@ -80,144 +82,5 @@ while x==0:
     else:
         print("that's not right try again")
 
-x=0
-while x==0:
-    word1=input("Enter the index positions of if: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word3_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "if":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
-
-x=0
-while x==0:
-    word1=input("Enter the index positions of boolean: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word4_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "boolean":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
-
-x=0
-while x==0:
-    word1=input("Enter the index positions of double: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word5_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "double":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
-
-x=0
-while x==0:
-    word1=input("Enter the index positions of operators: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word6_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "operators":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
-
-x=0
-while x==0:
-    word1=input("Enter the index positions of string: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word7_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "string":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
-
-x=0
-while x==0:
-    word1=input("Enter the index positions of slicing: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word8_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "slicing":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
-
-x=0
-while x==0:
-    word1=input("Enter the index positions of index: ")
-    attempts+=1
-    i=0
-    foundword=""
-    while i < word9_length*2:
-        index=word1[i:i+2]
-        print(i)
-        print(index)
-        index=int(index)
-        foundword = foundword+puzzle[index]
-        i+=2
-    if foundword == "index":
-        print(foundword)
-        print("great job")
-        x=1
-    else:
-        print("that's not right try again")
 
 
