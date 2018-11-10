@@ -31,7 +31,7 @@ def menu():
                 return credits()
         if start.lower() == "quit":
             input("Press enter to quit")
-            exit()
+            return menu()
         else:
             print("Invalid Option")
 
@@ -109,6 +109,9 @@ def options():
     if yn.lower() == "n":
         print("you said no")
     yn2 = input("Do you want to change range? [y/n]: ")
+    if yn2.lower() == "n":
+        print("you said no")
+        return play()
     if yn2.lower() == "y":
         tempRange = input("’1-100’ or ‘1-200’ or ‘1-300’")
         if tempRange == "1-100":
