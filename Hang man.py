@@ -158,18 +158,18 @@ print("WELCOME TO HANGMAN. good luck")
 
 while wrong < max_wrong and so_far != word:
 
-    print(HANGMAN[worng])
+    print(HANGMAN[wrong])
     print("\nYou've used the following letters:\n", used)
     print("\nSo far, the word is:\n", so_far)
 
     guess = input("\n\nEnter your guess: ")
-    guess = guess.upper
+    guess = guess.upper()
 
 
     while guess in used:
       print("You've already guessed the letter", guess)
       guess = input("Enter your guess: ")
-      guess = guess.upper
+      guess = guess.upper()
 
     used.append(guess)
 
@@ -179,10 +179,10 @@ while wrong < max_wrong and so_far != word:
       #create new so_far to include guess
       new = ""
       for i in range(len(word)):
-        if guess == word[i]:
-            new += guess
-        else:
-            new += so_far[i]
+          if guess == word[i]:
+              new += guess
+          else:
+              new += so_far[i]
       so_far = new
     else:
       print("\nSorry"< guess, "isn't in the word.")
@@ -190,7 +190,7 @@ while wrong < max_wrong and so_far != word:
 
 if wrong  == max_wrong:
     print(HANGMAN[wrong])
-    print("\nYou've been hanged!")
+    print("\nYou've failed!")
     
 else:
     print("\nYou guessed it!")
