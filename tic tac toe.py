@@ -156,8 +156,26 @@ def computer_move(board, computer, human):
             print(move)
             return move
 ##############################################################################
-
-
+def main():
+    display_instructions()
+    computer, human = pieces()
+    board = new_board()
+    turn = X
+    display_board(board)
+    while not winner(board):
+        if turn == human:
+            move = human_move(board)
+            board[move] = human
+        else:
+            move = computer_move(board, computer, human)
+            board[move] = computer
+        turn = next_turn(turn)
+        display_board(board)
+    the_winner = winner(board)
+    congrat_winner(the_winner, computer, human)
+    
+main()
+input("press enter to exit")
 
 
 
