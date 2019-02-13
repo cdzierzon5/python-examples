@@ -230,15 +230,16 @@ class space(object):
 
 #functions
 #######################################################################################
-def ask_num():
+def ask_num(question = "How many player? (2-4): ",low = 2, high = 5):
+
     while True:
-        num = input("enter how many people are playing: (1-4)")
+        response = None
         try:
-            num = int(num)
-            if num in range(1, 4+1):
-                return num
+            response = int(input(question))
+            if response in range(low, high):
+                return response
             else:
-                print("you must choose a number between", 1,"and",4)
+                print("that is out of range")
         except:
             print("that was not a number")
 
@@ -280,7 +281,7 @@ def main():
     #     input()
     # print(winner)
 #############################################new main
-    num_players = ask_num()
+    num_players = ask_num(question, low, high)
     players = []
     turn = 0
     winner = None
